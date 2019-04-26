@@ -1,0 +1,504 @@
+// Typography-----------------------------------------------------------------------------
+@font-face {
+    font-family: "klavikaLight";
+    src: url("../fonts/klavika-light-webfont.woff");
+  }
+  
+  @font-face {
+    font-family: "klavikaRegular";
+    src: url("../fonts/klavika-regular-webfont.woff");
+  }
+  
+  @font-face {
+    font-family: "klavikaMedium";
+    src: url("../fonts/klavika-medium-webfont.woff");
+  }
+  
+  @font-face {
+    font-family: "klavikaBold";
+    src: url("../fonts/klavika-bold-webfont.woff");
+  }
+  // ---------------------------------------------------------------------------------------
+  // Body-----------------------------------------------------------------------------------
+  
+  body {
+    margin: 0px;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Loading page---------------------------------------------------------------------------
+  
+  #loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 70%;
+    margin-left: 15%;
+    padding: 4px 0 0 0;
+        div {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .imgBoxOut {
+        width: 70%;
+        height: auto;
+        position: relative;
+        animation: rebota 1s alternate infinite ease-out;
+        filter: opacity(80%);
+        filter: drop-shadow(0 0 0.75rem rgb(185, 185, 185));
+        img {
+            width: 100%;  
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        }
+    }
+
+  .text-footnote {
+      margin-top: 3px;
+      p{
+        font-size: 14px;
+      }
+  }
+  
+  .imgText {
+    display: flex;
+    justify-content: center;
+      .text {
+        margin-top: 20%;
+      }
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Main page - landing--------------------------------------------------------------------
+  
+  #background {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    -webkit-transition: all 0.5s ease-in-out;
+    z-index: -1;
+      img {
+        height: 100%;
+        width: initial;
+      }
+  }
+  
+  .info {
+    height: 85vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+  }
+  
+  .home{
+    #homeInfo{
+      display: block;
+    }
+    #phraseBox{
+      display: none;
+    }
+  }
+  
+  #homeInfo {
+    display: none;
+    height: 85vh;
+    width: 100vw;
+  }
+  
+  .title{
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // padding: 2% 2% 0 2%; 
+    // margin: 2% 2% 0 2%; 
+  }
+  
+  .titleAdj {
+    padding: 2% 2% 0 2%;
+  }
+  
+  .footAdj {
+    padding: 8% 1% 0 2%;
+    p {
+        font-size: 12px;
+    }
+  }
+  
+  .footNote {
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 3% 2% 2% 0; 
+  }
+  
+  .phraseStyle{
+    height: 85vh;
+    margin: 0;
+    font-family: "klavikaLight";
+    letter-spacing: 2px;
+    color: white;
+    font-size: 34px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+  }
+  
+  #phraseBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 6% 0 6%; 
+    height: 85vh;
+      #phrase{
+        margin-top: 11%;
+       }
+  }
+  
+  .in {
+    -webkit-transition: all 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  .out {
+    opacity: 0;
+  }
+  
+  p{
+    font-family: "klavikaLight";
+    color: white;
+    font-size: 9px;
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Buttons--------------------------------------------------------------------------------
+  
+  button {
+    background: none;
+      border: none;
+      padding: 0;
+    cursor: pointer;
+    outline: none;
+      .fa-chevron-left {
+        font-size: 35px;
+        color: white;
+      }
+      .fa-chevron-right {
+        font-size: 35px;
+        color: white;
+      }
+  };
+  
+  .arrows {
+    height: 85vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .buttonBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2% 0 2%;
+  }
+  
+  #buttonLeft {
+    display: none
+  }
+  
+  #buttonRight {
+    display: block;
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Footer---------------------------------------------------------------------------------
+  
+  footer{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+      .logo{
+        width: 5%;
+        height: auto;
+        margin: 0 3% 0 2%;
+        img{
+          width: 90%;
+          filter: invert(100%);
+        }
+      }
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Dynamic screen indicator---------------------------------------------------------------
+  
+  .first-box{
+    width: 11%;
+    height: 12%;
+    margin: 4% 1% 1% 2%;
+    border: 2px white dotted;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+      #box{
+        height: 100%;
+        width: 17px;
+        border-right: 2px white dotted;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+      }
+  }
+  
+  .last{
+    height: 100%;
+    width: 14px;
+  }
+  .innerBox{
+    height: 98%;
+    width: 91%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .innerBox:hover { 
+   background-color: white;
+  }
+  
+  #textP {
+    margin:0;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  
+  #first{
+    height: 100%;
+    width: 16px;
+    border-right: 2px white dotted;
+  }
+  
+  #dynamic {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Final screen---------------------------------------------------------------------------
+  
+  #final {
+    display: none;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 85vh;
+    width: 100%;
+    position: absolute;
+    // z-index: 2;
+      .finalBox{
+        margin: 2% 2% 0 0;
+        height: 50%;
+      }
+  }
+  
+  .cont {
+    display: flex;
+    justify-content: flex-end;
+    height: 50%;
+      p {
+        text-align: right;
+      }
+  }
+  
+  .adj {
+    margin-top: 20%;
+      a {
+        color: white;
+      }
+  }
+  
+  .social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+      .socialBox {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 20%;
+        margin: 0 2% 0 2%;
+          a {
+            text-decoration: none;
+          }
+         div {
+           display: flex;
+           height: 100%;
+           align-items: center;
+         }
+      }
+  }
+  
+  .fa-facebook-f {
+    color: white;
+    font-size: 9px;
+  }
+  
+  .fa-twitter {
+    color: white;
+    font-size: 9px;
+  }
+  
+  .fa-envelope {
+    color: white;
+    font-size: 9px;
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Animations - Typewritter---------------------------------------------------------------
+  
+  .text p {
+    overflow: hidden; 
+    border-right: .15em solid white; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    animation: 
+      typing 2s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Animations - Floating------------------------------------------------------------------
+  
+  .imgBox {
+    animation: MoveUpDown 1s linear infinite;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 20px;
+    }
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  // Hide div-------------------------------------------------------------------------------
+  
+  #hide {
+    display: none;
+  }
+  
+  // ---------------------------------------------------------------------------------------
+  
+   @media (max-width: 600px) {
+     #background {
+       height: 30%;
+     }
+  
+    .title{
+        margin-top: 60%;
+        height: 21%;
+        text-align: center;
+        display: flex;
+        justify-content: center;  
+        background-color: #0d0d0d;
+    }
+  
+     .phraseStyle{
+       height: 20vh;
+       font-size: 25px;
+    }
+  
+     .center {
+       display: flex;
+       justify-content: center;
+    }
+  
+    .phraseSize {
+       font-size: 25px;
+    }
+    
+    .phrase{
+       font-size: 25px;
+     }
+
+    .media {
+       display: flex;
+       align-items: flex-start;
+       justify-content: center;
+       width: 100%;
+       margin-top: 20%;
+       background-color: #0d0d0d;
+  
+    }
+  
+    #phraseBox {
+  
+       justify-content: flex-start;
+       align-items: center;
+       padding: 0;
+    }
+  
+    .footNote {
+       align-items: flex-start;
+       justify-content: center;
+       text-align: center;
+       margin-top: 27%;
+    }
+  
+    footer{
+        .logo{
+           width: 15%;
+           margin: 0 5% 0 0;
+        }
+    }
+  
+    .whatScreen{
+       border: 1px white dotted;
+         #box{
+           border-right: 1.5px white dotted;
+        }
+    }
+    
+    #first{
+       border-right: 1.5px white dotted;
+    }
+  
+     #fraseBox {
+       justify-content: center;
+     }
+  
+   }
